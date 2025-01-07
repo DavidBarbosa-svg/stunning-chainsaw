@@ -1,0 +1,168 @@
+/* Resetando alguns estilos padrões */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Corpo da página */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f7f7f7;
+    color: #333;
+    display: flex;
+    justify-content: center;  /* Centralizando horizontalmente */
+    align-items: center;      /* Centralizando verticalmente */
+    height: 100vh;
+    margin: 0;
+    flex-direction: column;   /* Organiza os elementos na vertical */
+    padding-top: 20px;        /* Ajuste para espaço no topo */
+}
+
+/* Cabeçalho com gradiente */
+header h1 {
+    color: transparent;
+    background: linear-gradient(45deg, #4CAF50, #00bcd4);
+    background-clip: text;
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 30px;
+    text-align: center;
+    letter-spacing: 1px;
+    padding: 20px 0;
+    text-transform: uppercase;
+    width: 100%;
+}
+
+
+main {
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 600px;
+    padding: 20px;
+    text-align: center;
+}
+
+
+section {
+    margin-bottom: 20px;
+}
+
+
+form input, form button {
+    width: 100%;
+    padding: 12px;
+    margin: 8px 0;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    font-size: 1rem;
+}
+
+form input {
+    margin-bottom: 10px;
+}
+
+form button {
+    background-color: #4CAF50;
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+form button:hover {
+    background-color: #45a049;
+}
+
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin-bottom: 20px;
+}
+
+ul li {
+    padding: 12px;
+    border-bottom: 1px solid #eee;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 1rem;
+    color: #555;
+}
+
+ul li input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+ul li span {
+    flex-grow: 1;
+    text-align: left;
+}
+
+ul li span:nth-child(2) {
+    font-weight: bold;
+    color: #4CAF50;
+}
+
+
+button#excluirSelecionados {
+    background-color: #dc3545;
+    color: white;
+    font-weight: bold;
+    padding: 12px;
+    width: 100%;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    border-radius: 5px;
+}
+
+button#excluirSelecionados:hover {
+    background-color: #c82333;
+}
+
+button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+
+section h2 {
+    font-size: 1.5rem;
+    color: #333;
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+
+.alert {
+    background-color: #f8d7da;
+    color: #721c24;
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 10px;
+    text-align: center;
+    font-size: 1rem;
+}
+
+
+@media (max-width: 600px) {
+    main {
+        padding: 15px;
+    }
+
+    header h1 {
+        font-size: 2rem;
+    }
+
+    form button {
+        font-size: 1rem;
+    }
+
+    section h2 {
+        font-size: 1.2rem;
+    }
+}
