@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Controle de Gastos</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style-responsive.css"> <!-- Link para o CSS responsivo -->
+    <link rel="manifest" href="/manifest.json">
+</head>
+<body>
+    <header>
+        <h1>Controle de Gastos Mensais</h1>
+    </header>
+
+    <main>
+        <div class="container">
+            <!-- Coluna de adicionar compra -->
+            <div class="coluna">
+                <section>
+                    <h2>Adicionar Compra</h2>
+                    <form id="formCompra">
+                        <label for="descricao">Descrição da Compra</label>
+                        <input type="text" id="descricao" name="descricao" placeholder="Descrição da Compra" required>
+                        <label for="valor">Valor</label>
+                        <input type="number" id="valor" name="valor" placeholder="Valor" required>
+                        <button type="submit">Adicionar</button>
+                    </form>
+                </section>
+
+                <section>
+                    <h2>Compras Registradas</h2>
+                    <ul id="listaCompras"></ul>
+                    <button id="excluirSelecionados">Excluir Selecionados</button>
+                </section>
+            </div>
+
+            <!-- Coluna de saldos -->
+            <div class="coluna">
+                <section>
+                    <h2>Definir Valores</h2>
+                    <form id="formSaldos">
+                        <label for="inputSaldoTotal">Total na Conta</label>
+                        <input type="number" id="inputSaldoTotal" name="saldoTotal" placeholder="Total na Conta" required>
+                        <label for="inputInvestimentos">Valor Investido</label>
+                        <input type="number" id="inputInvestimentos" name="investimentos" placeholder="Valor Investido">
+                        <button type="submit">Atualizar Valores</button>
+                    </form>
+                </section>
+
+                <section>
+                    <h2>Saldos</h2>
+                    <p><strong>Saldo Total:</strong> R$ <span id="saldoTotal">0.00</span></p>
+                    <p><strong>Valor Investido:</strong> R$ <span id="valorInvestido">0.00</span></p>
+                    <button id="zerarSaldo">Zerar Saldo</button>
+                </section>
+
+                <section>
+                    <h2>Total Gasto: R$ <span id="totalGasto">0.00</span></h2>
+                </section>
+            </div>
+
+            <!-- Coluna da calculadora -->
+            <div class="coluna">
+                <section>
+                    <h2>Calculadora</h2>
+                    <div id="calculadora">
+                        <input type="text" id="display" disabled>
+                        <div class="teclado">
+                            <button class="botaoCalculadora" onclick="adicionarDigito('1')">1</button>
+                            <button class="botaoCalculadora" onclick="adicionarDigito('2')">2</button>
+                            <button class="botaoCalculadora" onclick="adicionarDigito('3')">3</button>
+                            <button class="botaoCalculadora" onclick="adicionarDigito('+')">+</button>
+                            <button class="botaoCalculadora" onclick="adicionarDigito('4')">4</button>
+                            <button class="botaoCalculadora" onclick="adicionarDigito('5')">5</button>
+                            <button class="botaoCalculadora" onclick="adicionarDigito('6')">6</button>
+                            <button class="botaoCalculadora" onclick="adicionarDigito('-')">-</button>
+                            <button class="botaoCalculadora" onclick="adicionarDigito('7')">7</button>
+                            <button class="botaoCalculadora" onclick="adicionarDigito('8')">8</button>
+                            <button class="botaoCalculadora" onclick="adicionarDigito('9')">9</button>
+                            <button class="botaoCalculadora" onclick="adicionarDigito('*')">*</button>
+                            <button class="botaoCalculadora" onclick="adicionarDigito('0')">0</button>
+                            <button class="botaoCalculadora" onclick="adicionarDigito('.')">.</button>
+                            <button class="botaoCalculadora" onclick="limparDisplay()">C</button>
+                            <button class="botaoCalculadora" onclick="adicionarDigito('/')">/</button>
+                            <button class="botaoCalculadora" onclick="calcularResultado()">=</button>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

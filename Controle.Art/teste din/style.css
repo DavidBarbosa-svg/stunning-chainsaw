@@ -1,0 +1,150 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #121212; 
+    color: #e0e0e0; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    flex-direction: column;
+    padding: 20px;
+}
+
+header h1 {
+    color: transparent;
+    background: linear-gradient(45deg, #bb86fc, #03dac6);
+    background-clip: text;
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.container {
+    display: flex;
+    gap: 20px;
+    width: 100%;
+    max-width: 1200px; 
+}
+
+.coluna {
+    flex: 1;
+    background-color: #1f1f1f; 
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    padding: 20px;
+}
+
+section {
+    margin-bottom: 20px;
+}
+
+form input, form button {
+    width: 100%;
+    padding: 12px;
+    margin: 8px 0;
+    border-radius: 5px;
+    border: 1px solid #333; 
+    font-size: 1rem;
+    background-color: #333; 
+    color: #e0e0e0;
+}
+
+form button {
+    background-color: #bb86fc; 
+    color: #121212;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+form button:hover {
+    background-color: #9a67ea;
+    transform: scale(1.05);
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin-bottom: 20px;
+}
+
+ul li {
+    padding: 12px;
+    border-bottom: 1px solid #333; 
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 1rem;
+    color: #e0e0e0;
+}
+
+ul li input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+ul li span {
+    flex-grow: 1;
+    text-align: left;
+}
+
+button#excluirSelecionados {
+    background-color: #cf6679; 
+    color: #121212;
+    font-weight: bold;
+    padding: 12px;
+    width: 100%;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    border-radius: 5px;
+}
+
+button#excluirSelecionados:hover {
+    background-color: #b85670;
+    transform: scale(1.05);
+}
+
+section h2 {
+    font-size: 1.2rem;
+    color: #e0e0e0;
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+#calculadora {
+    display: flex;
+    flex-direction: column;
+}
+
+#display {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid #333;
+    background-color: #333;
+    color: #e0e0e0;
+    text-align: right;
+    font-size: 1.5rem;
+}
+
+.teclado {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+.botaoCalculadora {
+    padding: 15px;
+    border-radius: 5px;
+    border: none;
+}
